@@ -210,12 +210,11 @@
                 <div class="table_cell">
                     <div class="modal-block__content modal-block__content--form"><a href="#" data-dismiss="modal" class="modal-close"></a>
                         <div class="modal-block__title">Registration</div>
-                        <form id="js-register-form" action="" method="POST">
-                            <input type="hidden" name="_token" value="myRqfaMyhL2FRG9jaMFQ0fslcQBo8HwH4iPBXMzU">
+                        <form id="js-register-form" action="{{route('Register')}}" method="POST" enctype="multipart/form-data">
+                            @csrf
                             <input type="email" name="email" placeholder="Email">
-                            <input type="text" name="nickname" placeholder="Username">
+                            <input type="text" name="username" placeholder="Username">
                             <input type="password" name="password" placeholder="Password">
-                            <input type="password" name="password_confirmation" placeholder="Confirm password">
                             <a href="#modal2" data-dissmiss="#modal1" data-toggle="modal">Already have an account?</a>
                             <!-- <div id="register-captcha"></div> -->
                             <button type="submit">Register</button>

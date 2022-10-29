@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', 'HomeController@home');
+Route::post('/Register', 'HomeController@register')->name('Register');
 
 Route::get('/login', function () {
     return view('auth.login');
